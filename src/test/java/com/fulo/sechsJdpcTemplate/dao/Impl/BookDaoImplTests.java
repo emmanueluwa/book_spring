@@ -71,4 +71,14 @@ public class BookDaoImplTests {
                 "384-3-4543-4567-0"
         );
     }
+
+    @Test
+    public void testThatDeleteGeneratesCorrectSql() {
+        underTest.delete("384-3-4543-4567-0");
+
+        verify(jdbcTemplate).update(
+                "DELETE FROM books where isbn = ?",
+                "384-3-4543-4567-0"
+        );
+    }
 }

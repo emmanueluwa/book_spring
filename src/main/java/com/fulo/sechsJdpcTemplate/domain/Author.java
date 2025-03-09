@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.PackagePrivate;
+import org.hibernate.annotations.OptimisticLockType;
+import org.hibernate.annotations.OptimisticLocking;
 
 @Data
 @AllArgsConstructor
@@ -13,7 +16,6 @@ import lombok.NoArgsConstructor;
 //entity that can be used for springboot jpa
 @Entity
 @Table(name = "authors")
-
 public class Author {
 
     @Id
@@ -24,4 +26,5 @@ public class Author {
     private String name;
 
     private Integer age;
+
 }

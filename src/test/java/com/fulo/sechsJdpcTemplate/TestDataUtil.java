@@ -16,6 +16,10 @@ public final class TestDataUtil {
         return AuthorEntity.builder().name("Latifah Nisr").age(27).build();
     }
 
+    public static AuthorDto createTestAuthorDtoA() {
+        return AuthorDto.builder().name("Latifah Nisr").age(27).build();
+    }
+
     public static AuthorEntity createTestAuthorB() {
         return AuthorEntity.builder().name("Furqan Lawah").age(29).build();
     }

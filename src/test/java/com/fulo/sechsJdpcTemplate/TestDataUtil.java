@@ -1,7 +1,7 @@
 package com.fulo.sechsJdpcTemplate;
 
-import com.fulo.sechsJdpcTemplate.domain.Author;
-import com.fulo.sechsJdpcTemplate.domain.Book;
+import com.fulo.sechsJdpcTemplate.domain.entities.AuthorEntity;
+import com.fulo.sechsJdpcTemplate.domain.entities.BookEntity;
 
 public final class TestDataUtil {
 
@@ -10,39 +10,39 @@ public final class TestDataUtil {
     }
 
 
-    public static Author createTestAuthorA() {
-        return Author.builder().name("Latifah Nisr").age(27).build();
+    public static AuthorEntity createTestAuthorA() {
+        return AuthorEntity.builder().name("Latifah Nisr").age(27).build();
     }
 
-    public static Author createTestAuthorB() {
-        return Author.builder().name("Furqan Lawah").age(29).build();
+    public static AuthorEntity createTestAuthorB() {
+        return AuthorEntity.builder().name("Furqan Lawah").age(29).build();
     }
 
-    public static Author createTestAuthorC() {
-        return Author.builder().name("Sasu Owei").age(63).build();
+    public static AuthorEntity createTestAuthorC() {
+        return AuthorEntity.builder().name("Sasu Owei").age(63).build();
     }
 
-    public static Book createTestBookA(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookA(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("384-3-4543-4567-0")
                 .title("The psychology of money")
-                .author(author)
+                .authorEntity(authorEntity)
                 .build();
     }
 
-    public static Book createTestBookB(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookB(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("389-3-4543-4568-0")
                 .title("psychology of money II")
-                .author(author)
+                .authorEntity(authorEntity)
                 .build();
     }
 
-    public static Book createTestBookC(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookC(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("387-3-4543-4565-0")
                 .title("of money III")
-                .author(author)
+                .authorEntity(authorEntity)
                 .build();
     }
 }

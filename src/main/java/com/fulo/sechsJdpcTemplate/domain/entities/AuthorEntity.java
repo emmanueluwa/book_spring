@@ -1,13 +1,10 @@
-package com.fulo.sechsJdpcTemplate.domain;
+package com.fulo.sechsJdpcTemplate.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.PackagePrivate;
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +13,7 @@ import org.hibernate.annotations.OptimisticLocking;
 //entity that can be used for springboot jpa
 @Entity
 @Table(name = "authors")
-public class Author {
+public class AuthorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_seq")

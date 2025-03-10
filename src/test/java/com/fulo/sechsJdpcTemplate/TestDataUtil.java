@@ -1,5 +1,7 @@
 package com.fulo.sechsJdpcTemplate;
 
+import com.fulo.sechsJdpcTemplate.domain.dto.AuthorDto;
+import com.fulo.sechsJdpcTemplate.domain.dto.BookDto;
 import com.fulo.sechsJdpcTemplate.domain.entities.AuthorEntity;
 import com.fulo.sechsJdpcTemplate.domain.entities.BookEntity;
 
@@ -27,6 +29,14 @@ public final class TestDataUtil {
                 .isbn("384-3-4543-4567-0")
                 .title("The psychology of money")
                 .authorEntity(authorEntity)
+                .build();
+    }
+
+    public static BookDto createTestBookDtoA(final AuthorDto author) {
+        return BookDto.builder()
+                .isbn("384-3-4543-4567-0")
+                .title("The psychology of money")
+                .author(null)
                 .build();
     }
 
